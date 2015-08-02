@@ -19,5 +19,5 @@ DIY guitar pedals are fun to build and use.  I found that I would often miss som
 * Checkboxes help you keep track of items you have added to your vendor's cart
 * Seed the components list with common resistor values
 
-The program uses C#, Winforms, and a SQLite database file.  The SQLite file was chosen in order to simplify use:  A self-contained program can be found in the Release folder of the Release branch.
-Click Download Zip, unzip the folder wherever you wish, and Pedal Builder can be run from the .exe inside.  No intallation is necessary.
+The program uses C#, Winforms, and a SQLite database file.  The SQLite file was chosen in order to simplify use; no database server installation is necessary.
+The program installer can be found in the publish folder of the Release branch.  Click Download Zip, unzip, and install.
