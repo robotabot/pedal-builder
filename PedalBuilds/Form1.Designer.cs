@@ -90,6 +90,9 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.aUTOFILLToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.resistorsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.version100ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.robotabotgmailcomToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gBoxAddComponentToPedal = new System.Windows.Forms.GroupBox();
             this.lblSearch = new System.Windows.Forms.Label();
             this.txtSearch = new System.Windows.Forms.TextBox();
@@ -97,9 +100,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtAddComponentToPedalName = new System.Windows.Forms.TextBox();
             this.btnRemoveComponentFromPedal = new System.Windows.Forms.Button();
-            this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.version100ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.robotabotgmailcomToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gBoxPedal.SuspendLayout();
             this.gBoxBuilds.SuspendLayout();
             this.gBoxParts.SuspendLayout();
@@ -690,9 +690,32 @@
             // resistorsToolStripMenuItem
             // 
             this.resistorsToolStripMenuItem.Name = "resistorsToolStripMenuItem";
-            this.resistorsToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.resistorsToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
             this.resistorsToolStripMenuItem.Text = "Resistors";
             this.resistorsToolStripMenuItem.Click += new System.EventHandler(this.resistorsToolStripMenuItem_Click);
+            // 
+            // aboutToolStripMenuItem
+            // 
+            this.aboutToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.version100ToolStripMenuItem,
+            this.robotabotgmailcomToolStripMenuItem});
+            this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
+            this.aboutToolStripMenuItem.Text = "ABOUT";
+            // 
+            // version100ToolStripMenuItem
+            // 
+            this.version100ToolStripMenuItem.Enabled = false;
+            this.version100ToolStripMenuItem.Name = "version100ToolStripMenuItem";
+            this.version100ToolStripMenuItem.Size = new System.Drawing.Size(198, 22);
+            this.version100ToolStripMenuItem.Text = "Version 1.0.0";
+            // 
+            // robotabotgmailcomToolStripMenuItem
+            // 
+            this.robotabotgmailcomToolStripMenuItem.Enabled = false;
+            this.robotabotgmailcomToolStripMenuItem.Name = "robotabotgmailcomToolStripMenuItem";
+            this.robotabotgmailcomToolStripMenuItem.Size = new System.Drawing.Size(198, 22);
+            this.robotabotgmailcomToolStripMenuItem.Text = "robotabot@gmail.com";
             // 
             // gBoxAddComponentToPedal
             // 
@@ -767,29 +790,6 @@
             this.btnRemoveComponentFromPedal.Text = "Remove Component From Pedal";
             this.btnRemoveComponentFromPedal.UseVisualStyleBackColor = false;
             this.btnRemoveComponentFromPedal.Click += new System.EventHandler(this.btnRemoveComponentFromPedal_Click);
-            // 
-            // aboutToolStripMenuItem
-            // 
-            this.aboutToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.version100ToolStripMenuItem,
-            this.robotabotgmailcomToolStripMenuItem});
-            this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
-            this.aboutToolStripMenuItem.Text = "ABOUT";
-            // 
-            // version100ToolStripMenuItem
-            // 
-            this.version100ToolStripMenuItem.Enabled = false;
-            this.version100ToolStripMenuItem.Name = "version100ToolStripMenuItem";
-            this.version100ToolStripMenuItem.Size = new System.Drawing.Size(198, 22);
-            this.version100ToolStripMenuItem.Text = "Version 1.0.0";
-            // 
-            // robotabotgmailcomToolStripMenuItem
-            // 
-            this.robotabotgmailcomToolStripMenuItem.Enabled = false;
-            this.robotabotgmailcomToolStripMenuItem.Name = "robotabotgmailcomToolStripMenuItem";
-            this.robotabotgmailcomToolStripMenuItem.Size = new System.Drawing.Size(198, 22);
-            this.robotabotgmailcomToolStripMenuItem.Text = "robotabot@gmail.com";
             // 
             // Form1
             // 

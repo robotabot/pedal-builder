@@ -52,6 +52,11 @@ namespace PedalBuilds
                 FillPartList();
                 btnDeletePedal.Enabled = true;
             }
+            else
+            {
+                btnDeletePedal.Enabled = false;
+                btnPdlUpdate.Enabled = false;
+            }
 
         }
 
@@ -173,6 +178,11 @@ namespace PedalBuilds
             {
                 FillComponentTextBoxes(e.Item);
                 btnDeleteComponent.Enabled = true;
+            }
+            else
+            {
+                btnUpdateComponent.Enabled = false;
+                btnDeleteComponent.Enabled = false;
             }
         }
 
@@ -390,10 +400,10 @@ namespace PedalBuilds
                 {
                     con.Open();
 
-                    string updateCmpSql = "UPDATE components SET name = '" +
-                        txtPedalName +
+                    string updateCmpSql = "UPDATE pedals SET name = '" +
+                        txtPedalName.Text +
                         "', notes = '" + notes +
-                        " WHERE id = " + lstPedals.SelectedItems[0].Tag;
+                        "' WHERE id = " + lstPedals.SelectedItems[0].Tag;
 
                     using (SQLiteCommand cmd = new SQLiteCommand(updateCmpSql, con))
                     {
@@ -999,9 +1009,13 @@ namespace PedalBuilds
         //Enable/disable the Remove From Build List button.
         private void lstBuilds_ItemSelectionChanged(object sender, ListViewItemSelectionChangedEventArgs e)
         {
-            if (lstBuilds.SelectedItems.Count == 1)
+            if (e.IsSelected)
             {
                 btnRemoveFromBuildList.Enabled = true;
+            }
+            else
+            {
+                btnRemoveFromBuildList.Enabled = false;
             }
         }
     }

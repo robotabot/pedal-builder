@@ -13,6 +13,7 @@ namespace PedalBuilds
     {
         public static void Create()
         {
+            //TODO place in appdata folder
             try
             {
                 if (!File.Exists("Pedals.sqlite"))
