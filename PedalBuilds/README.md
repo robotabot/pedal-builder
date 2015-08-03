@@ -1,4 +1,4 @@
-﻿Pedal Builder
+﻿Pedal Builder 1.0.0
 =========
 
 ###A tool for DIY guitar pedal builders to help organize and order components.###
@@ -20,4 +20,3 @@ DIY guitar pedals are fun to build and use.  I found that I would often miss som
 * Seed the components list with common resistor values
 
 The program uses C#, Winforms, and a SQLite database file.  The SQLite file was chosen in order to simplify use; no database server installation is necessary.
-The program installer can be found in the publish folder of the Release branch.  Click Download Zip, unzip, and install.

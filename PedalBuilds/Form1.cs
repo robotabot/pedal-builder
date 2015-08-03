@@ -8,6 +8,7 @@ using System.Diagnostics;
 using System.Drawing;
 using System.Drawing.Text;
 using System.Globalization;
+using System.IO;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Runtime.CompilerServices;
@@ -20,7 +21,9 @@ namespace PedalBuilds
 {
     public partial class Form1 : Form
     {
-        static SQLiteConnection con = new SQLiteConnection(@"Data Source=.\Pedals.sqlite;Version=3");
+        static string appDataFolder = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
+        static string dataFolder = Path.Combine(appDataFolder, "Pedal Builder");
+        static SQLiteConnection con = new SQLiteConnection(@"Data Source=" + dataFolder + "/Pedals.sqlite;Version=3");
         List<PedalPart> parts = new List<PedalPart>();
         List<Component> componentList = new List<Component>();
         List<PedalBuild> builds = new List<PedalBuild>(); 

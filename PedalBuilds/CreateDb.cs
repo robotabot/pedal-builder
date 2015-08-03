@@ -13,15 +13,22 @@ namespace PedalBuilds
     {
         public static void Create()
         {
-            //TODO place in appdata folder
+            string appDataFolder = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
+            string dataFolder = Path.Combine(appDataFolder, "Pedal Builder");
+
             try
             {
-                if (!File.Exists("Pedals.sqlite"))
+                if (!Directory.Exists(dataFolder))
                 {
-                    SQLiteConnection.CreateFile("Pedals.sqlite");
+                    Directory.CreateDirectory(dataFolder);
                 }
 
-                SQLiteConnection con = new SQLiteConnection("Data Source=Pedals.sqlite;Version=3");
+                if (!File.Exists(Path.Combine(dataFolder, "Pedals.sqlite")))
+                {
+                    SQLiteConnection.CreateFile(Path.Combine(dataFolder, "Pedals.sqlite"));
+                }
+
+                SQLiteConnection con = new SQLiteConnection(@"Data Source=" + dataFolder + "/Pedals.sqlite;Version=3");
                 con.Open();
 
                 string pedalSql = "CREATE TABLE IF NOT EXISTS pedals (" +
